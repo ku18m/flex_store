@@ -2,16 +2,20 @@ body {
   background-color: #f1f0e4;
 }
 
+.mainLayer {
+  display: none;
+}
+
 .navbar {
   background-color: white;
   padding: 10px 5px;
   position: fixed;
   height: 50px;
   width: 70%;
-  z-index: 1;
+  z-index: 10;
   margin: 20px 15%;
   align-items: center;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .navbar .navLogo {
@@ -75,6 +79,70 @@ li button:hover {
 
 .cleaner {
   clear: both;
+}
+
+.responsiveMenu {
+  display: none;
+  float: right;
+  margin-top: 10px;
+}
+
+.resListDropDown {
+  background-color: transparent;
+  border: none;
+}
+
+.responsiveMenu img {
+  width: 30px;
+  height: 30px;
+}
+
+.responsiveList {
+  display: none;
+  /* position: absolute; */
+  background-color: #f1f0e4;
+  width: 100%;
+}
+
+.responsiveList button {
+  font-size: 13px;
+  padding: 10px;
+  width: 100%;
+  font-size: 18px;
+  display: inline-block;
+  color: #36330e;
+  text-align: center;
+  font-weight: bolder;
+  border: none;
+}
+
+.responsiveList .catogeriesList button {
+  font-size: 13px;
+  padding: 10px;
+  width: 100%;
+}
+
+.responsiveList .ctg-respovsive {
+  border: #36330e 0.1em solid;
+}
+
+.responsiveMenu:hover .responsiveList {
+  display: block;
+}
+
+.responsiveList button:hover {
+  cursor: pointer;
+  color: orange;
+}
+
+@media screen and (max-width: 790px) {
+  .navLinks {
+    display: none;
+  }
+
+  .responsiveMenu {
+    display: block;
+  }
 }
 
 .sliderBlock {

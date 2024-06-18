@@ -6,30 +6,89 @@
   <link rel="stylesheet" href="./styles/reset.css">
   <link rel="stylesheet" href="./styles/home.css">
   <link rel="stylesheet" href="./styles/card.css">
+  <link rel="stylesheet" href="./styles/login.css">
   <link rel="icon" href="https://www.fintechfutures.com/files/2023/09/Flex-logo.jpg">
   <title>Flex</title>
 </head>
 <body>
   <div class="mainLayer register">
-
+    <div class="registerFormDiv">
+      <h2>Register</h2>
+      <form action="" id="registerForm">
+        <input type="text" placeholder="First Name" name="firstName">
+        <input type="text" placeholder="Last Name" name="lastName">
+        <input type="text" placeholder="Username" name="username">
+        <input type="email" placeholder="Email" name="email">
+        <input type="password" placeholder="Password" name="password" id="registrationPassword">
+        <input type="password" placeholder="Confirm Password" name="passwordConfirm">
+        <p id="notificationPlaceholder"></p>
+        <button>Register</button>
+      </form>
+    </div>
   </div>
   <div class="mainLayer login">
-    
+    <div class="loginFormDiv">
+      <h2>Login</h2>
+      <form action="" id="loginForm">
+        <input type="text" placeholder="Username" name="username">
+        <input type="password" placeholder="Password" name="password">
+        <p id="notificationPlaceholder"></p>
+        <button>Login</button>
+      </form>
+      <p class="registerMssg">
+        Don't have an account?
+        <button class="registerBtn" id="showRegister">Register</button>
+      </p>
+    </div>
   </div>
   <div class="mainLayer loggedIn">
     <div class="navbar">
       <img src="https://www.fintechfutures.com/files/2023/09/Flex-logo.jpg" alt="logo" class="navLogo">
-      <!-- <div class="responsiveMenu">
-        <button><img src="./assets/navbar/categories.png" alt=""></button>
-      </div> -->
+      <div class="responsiveMenu">
+        <button class="resListDropDown">
+          <img src="./assets/navbar/categories.png" alt="">
+        </button>
+        <div class="responsiveList">
+          <button>
+            <img src="./assets/navbar/home.png" alt="">
+            Home
+          </button>
+          <div class="categories">
+            <button class="catogeriesDropDown">
+              <img src="./assets/navbar/categories.png" alt="">
+              Categories
+            </button>
+            <div class="catogeriesList ctg-respovsive">
+              <button>Men's wear</button>
+              <button>Women's wear</button>
+              <button>Electronics</button>
+              <button>Jewelery</button>
+            </div>
+          </div>
+          <button>
+            <img src="./assets/navbar/user.png" alt="">
+            Profile
+          </button>
+          <button>
+            <img src="./assets/navbar/cart.png" alt="">
+            Cart
+          </button>
+        </div>
+        <div class="cleaner"></div>
+      </div>
       <ul class="navLinks">
         <li>
-          <img src="./assets/navbar/home.png" alt="">
-          <button>Home</button>
+          <button>
+            <img src="./assets/navbar/home.png" alt="">
+            Home
+          </button>
+          
         </li>
         <li class="categories">
-          <img src="./assets/navbar/categories.png" alt="">
-          <button class="catogeriesDropDown">Categories</button>
+          <button class="catogeriesDropDown">
+            <img src="./assets/navbar/categories.png" alt="">
+            Categories
+          </button>
           <div class="catogeriesList">
             <button>Men's wear</button>
             <button>Women's wear</button>
@@ -38,12 +97,16 @@
           </div>
         </li>
         <li>
-          <img src="./assets/navbar/user.png" alt="">
-          <button>Profile</button>
+          <button>
+            <img src="./assets/navbar/user.png" alt="">
+            Profile
+          </button>
         </li>
         <li>
-          <img src="./assets/navbar/cart.png" alt="">
-          <button>Cart</button>
+          <button>
+            <img src="./assets/navbar/cart.png" alt="">
+            Cart
+          </button>
         </li>
       </ul>
       <div class="cleaner"></div>
@@ -60,8 +123,8 @@
         </div>
       </div>
       <div class="categoryBlock">
-        <h1 class="servicesHeader">Men's wear</h1>
-        <p class="servicesDescription">WHAT WE HAVE DONE SO FAR</p>
+        <h2 class="servicesHeader">Men's wear</h2>
+        <p class="servicesDescription">Elevate Your Style, Define Your Confidence</p>
         <div class="cardsBlock">
           <div class="card">
             <img src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg" alt="" class="cardPic">
@@ -94,8 +157,76 @@
         </div>
       </div>
       <div class="categoryBlock">
-        <h1 class="servicesHeader">Women's wear</h1>
-        <p class="servicesDescription">WHAT WE HAVE DONE SO FAR</p>
+        <h2 class="servicesHeader">Women's wear</h2>
+        <p class="servicesDescription">Empower Your Elegance, Embrace Your Style</p>
+        <div class="cardsBlock">
+          <div class="card">
+            <img src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg" alt="" class="cardPic">
+            <button class="cardTitle">Mens Casual Premium Slim Fit</button>
+            <p class="cardParagraph">Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing.</p>
+            <p class="cardPrice">22.3$</p>
+            <button class="cardAddToCart"><img src="./assets/card/add-to-cart.png" alt=""></button>
+          </div>
+          <div class="card">
+            <img src="https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg" alt="" class="cardPic">
+            <button class="cardTitle">Mens Cotton Jacket</button>
+            <p class="cardParagraph">Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing.</p>
+            <p class="cardPrice">55.99$</p>
+            <button class="cardAddToCart"><img src="./assets/card/add-to-cart.png" alt=""></button>
+          </div>
+          <div class="card">
+            <img src="https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg" alt="" class="cardPic">
+            <button class="cardTitle">Mens Cotton Jacket</button>
+            <p class="cardParagraph">Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing.</p>
+            <p class="cardPrice">55.99$</p>
+            <button class="cardAddToCart"><img src="./assets/card/add-to-cart.png" alt=""></button>
+          </div>
+          <div class="card">
+            <img src="https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg" alt="" class="cardPic">
+            <button class="cardTitle">Mens Cotton Jacket</button>
+            <p class="cardParagraph">Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing.</p>
+            <p class="cardPrice">55.99$</p>
+            <button class="cardAddToCart"><img src="./assets/card/add-to-cart.png" alt=""></button>
+          </div>
+        </div>
+      </div>
+      <div class="categoryBlock">
+        <h2 class="servicesHeader">Electronics</h2>
+        <p class="servicesDescription">Innovate Your World</p>
+        <div class="cardsBlock">
+          <div class="card">
+            <img src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg" alt="" class="cardPic">
+            <button class="cardTitle">Mens Casual Premium Slim Fit</button>
+            <p class="cardParagraph">Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing.</p>
+            <p class="cardPrice">22.3$</p>
+            <button class="cardAddToCart"><img src="./assets/card/add-to-cart.png" alt=""></button>
+          </div>
+          <div class="card">
+            <img src="https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg" alt="" class="cardPic">
+            <button class="cardTitle">Mens Cotton Jacket</button>
+            <p class="cardParagraph">Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing.</p>
+            <p class="cardPrice">55.99$</p>
+            <button class="cardAddToCart"><img src="./assets/card/add-to-cart.png" alt=""></button>
+          </div>
+          <div class="card">
+            <img src="https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg" alt="" class="cardPic">
+            <button class="cardTitle">Mens Cotton Jacket</button>
+            <p class="cardParagraph">Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing.</p>
+            <p class="cardPrice">55.99$</p>
+            <button class="cardAddToCart"><img src="./assets/card/add-to-cart.png" alt=""></button>
+          </div>
+          <div class="card">
+            <img src="https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg" alt="" class="cardPic">
+            <button class="cardTitle">Mens Cotton Jacket</button>
+            <p class="cardParagraph">Slim-fitting style, contrast raglan long sleeve, three-button henley placket, light weight & soft fabric for breathable and comfortable wearing.</p>
+            <p class="cardPrice">55.99$</p>
+            <button class="cardAddToCart"><img src="./assets/card/add-to-cart.png" alt=""></button>
+          </div>
+        </div>
+      </div>
+      <div class="categoryBlock">
+        <h2 class="servicesHeader">Jewelery</h2>
+        <p class="servicesDescription">Elegance in Every Sparkle</p>
         <div class="cardsBlock">
           <div class="card">
             <img src="https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_.jpg" alt="" class="cardPic">
@@ -129,5 +260,11 @@
       </div>
     </div>
   </div>
+  <!-- <script src="./scripts/checkLogin.js"></script>
+  <script src="./scripts/login.js"></script>
+  <script src="./scripts/cookies.js"></script>
+  <script src="./scripts/notifications.js"></script>
+  <script src="./scripts/display.js"></script> -->
+  <script type="module" src="./scripts/main.js"></script>
 </body>
 </html>
