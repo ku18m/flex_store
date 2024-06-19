@@ -11,7 +11,7 @@ function notificationPlaceHolderHandler(message, className) {
 function notificationsTimeOut(element) {
     setTimeout(function() {
         element.innerHTML = "";
-    }, 3000);
+    }, 5000);
 }
 
 
