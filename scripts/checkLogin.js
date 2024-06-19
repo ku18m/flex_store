@@ -3,16 +3,17 @@ import { getCookie } from './cookies.js';
 import { handleLoginForm } from './login.js';
 import * as user from './user.js';
 import { initializeHome } from './home.js';
+import { initializeNavbar } from './navbar.js';
 
 
 // Main display handler.
 function loginDisplayHandler(isUserLoggedIn) {
-    console.log(isUserLoggedIn);
     if (isUserLoggedIn) {
         handleLoggedIn();
     } else {
         handleNotLoggedIn();
     }
+    initializeNavbar();
     initializeHome();
     display("mainLayer", "loggedIn");
 }

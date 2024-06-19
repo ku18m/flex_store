@@ -1,11 +1,12 @@
 /* Handles home div components */
 import { getByCategory } from "./products.js";
 import { renderCard } from "./card.js";
+import { display } from "./display.js";
 
 
 // Initialize home div components
 function initializeHome() {
-    console.log("arrivedHome")
+    display("secLayer", "home");
     getByCategory(renderMensWear, `men's clothing`);
     getByCategory(renderWomensWear, `women's clothing`);
     getByCategory(renderElectronics, `electronics`);
@@ -16,6 +17,8 @@ function initializeHome() {
 // Render Cards div function.
 function renderCardsDiv(products, divId) {
     var cardsDiv = document.getElementById(divId);
+    console.log(cardsDiv);
+    // var ctgCardsDiv = document.getElementsByClassName(divId)[0];
     for (var i = 0; i < products.length; i++) {
         cardsDiv.appendChild(renderCard(products[i]));
     }

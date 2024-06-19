@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles/reset.css">
+  <link rel="stylesheet" href="./styles/main.css">
   <link rel="stylesheet" href="./styles/home.css">
   <link rel="stylesheet" href="./styles/card.css">
   <link rel="stylesheet" href="./styles/login.css">
+  <link rel="stylesheet" href="./styles/category.css">
   <link rel="icon" href="https://www.fintechfutures.com/files/2023/09/Flex-logo.jpg">
   <title>Flex</title>
 </head>
@@ -49,7 +51,7 @@
           <img src="./assets/navbar/categories.png" alt="">
         </button>
         <div class="responsiveList">
-          <button>
+          <button class="showHome">
             <img src="./assets/navbar/home.png" alt="">
             Home
           </button>
@@ -59,10 +61,10 @@
               Categories
             </button>
             <div class="catogeriesList ctg-respovsive">
-              <button>Men's wear</button>
-              <button>Women's wear</button>
-              <button>Electronics</button>
-              <button>Jewelery</button>
+              <button class="showCategory">Men's wear</button>
+              <button class="showCategory">Women's wear</button>
+              <button class="showCategory">Electronics</button>
+              <button class="showCategory">Jewelery</button>
             </div>
           </div>
           <button id="resNotLoggedInButton">
@@ -75,7 +77,7 @@
               <span id="resloggedInUser">Username</span>
             </button>
             <div class="resLoggedInList">
-              <button id="resEditProfile">
+              <button class="showProfile">
                 <img src="./assets/navbar/edit.png" alt="">
                 Edit Profile
               </button>
@@ -85,7 +87,7 @@
               </button>
             </div>
           </div>
-          <button>
+          <button class="showCart">
             <img src="./assets/navbar/cart.png" alt="">
             Cart <span class="cartCounter"></span>
           </button>
@@ -94,11 +96,10 @@
       </div>
       <ul class="navLinks">
         <li>
-          <button>
+          <button class="showHome">
             <img src="./assets/navbar/home.png" alt="">
             Home
           </button>
-          
         </li>
         <li class="categories">
           <button class="catogeriesDropDown">
@@ -106,10 +107,10 @@
             Categories
           </button>
           <div class="catogeriesList">
-            <button>Men's wear</button>
-            <button>Women's wear</button>
-            <button>Electronics</button>
-            <button>Jewelery</button>
+            <button class="showCategory">Men's wear</button>
+            <button class="showCategory">Women's wear</button>
+            <button class="showCategory">Electronics</button>
+            <button class="showCategory">Jewelery</button>
           </div>
         </li>
         <li id="notLoggedInButton">
@@ -124,7 +125,7 @@
             <span id="loggedInUser">Username</span>
           </button>
           <div class="loggedInList">
-            <button id="editProfile">
+            <button class="showProfile">
               <img src="./assets/navbar/edit.png" alt="">
               Edit Profile
             </button>
@@ -134,13 +135,51 @@
             </button>
         </li>
         <li>
-          <button>
+          <button class="showCart">
             <img src="./assets/navbar/cart.png" alt="">
             Cart <span class="cartCounter"></span>
           </button>
         </li>
       </ul>
       <div class="cleaner"></div>
+    </div>
+    <div class="secLayer profile">
+      <p>Profile</p>
+    </div>
+    <div class="secLayer menswear category">
+      <h2 class="ctg-title">Men's Wear</h2>
+      <h3 class="ctg-slogan">Elevate Your Style, Define Your Confidence</h3>
+      <hr>
+      <div class="cardsBlock" id="mensWearCards">
+          
+      </div>
+    </div>
+    <div class="secLayer womenswear category">
+      <h2 class="ctg-title">Women's Wear</h2>
+      <h3 class="ctg-slogan">Empower Your Elegance, Embrace Your Style</h3>
+      <hr>
+      <div class="cardsBlock" id="womensWearCards">
+          
+      </div>
+    </div>
+    <div class="secLayer electronics category">
+      <h2 class="ctg-title">Electronics</h2>
+      <h3 class="ctg-slogan">Innovate Your World</h3>
+      <hr>
+      <div class="cardsBlock" id="electronicsCards">
+          
+      </div>
+    </div>
+    <div class="secLayer jewelery category">
+      <h2 class="ctg-title">Jewelery</h2>
+      <h3 class="ctg-slogan">Elegance in Every Sparkle</h3>
+      <hr>
+      <div class="cardsBlock" id="jewelryCards">
+          
+      </div>
+    </div>
+    <div class="secLayer cart">
+      <p>Cart</p>
     </div>
     <div class="secLayer home">
       <div class="sliderBlock">
@@ -183,11 +222,6 @@
       </div>
     </div>
   </div>
-  <!-- <script src="./scripts/checkLogin.js"></script>
-  <script src="./scripts/login.js"></script>
-  <script src="./scripts/cookies.js"></script>
-  <script src="./scripts/notifications.js"></script>
-  <script src="./scripts/display.js"></script> -->
   <script type="module" src="./scripts/main.js"></script>
 </body>
 </html>
