@@ -1,4 +1,4 @@
-
+/* Cookies Handling module */
 
 
 // Get cookie function

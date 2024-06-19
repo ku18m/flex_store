@@ -2,6 +2,7 @@ import { display } from './display.js';
 import { getCookie } from './cookies.js';
 import { handleLoginForm } from './login.js';
 import * as user from './user.js';
+import { initializeHome } from './home.js';
 
 
 // Main display handler.
@@ -12,6 +13,7 @@ function loginDisplayHandler(isUserLoggedIn) {
     } else {
         handleNotLoggedIn();
     }
+    initializeHome();
     display("mainLayer", "loggedIn");
 }
 

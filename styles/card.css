@@ -1,16 +1,21 @@
 .cardsBlock {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
     height: auto;
 }
 
 .card {
     display: inline-block;
-    height: 400px;
-    width: 250px;
+    position: relative;
+    height: 600px;
+    width: 300px;
     margin: 10px;
     text-align: left;
     border: #36330e 0.1em solid;
     border-radius: 3px;
+    box-shadow: 0 4px 8px rgba(54, 54, 18, 0.5);
     padding: 15px;
     padding-bottom: 30px;
 }
@@ -32,7 +37,6 @@
     display: inline-block;
     margin: 10px auto;
     padding: 0px;
-    /* padding-bottom: 10px; */
 }
 
 .card .cardTitle:hover {
@@ -45,6 +49,8 @@
 }
 
 .card .cardPrice {
+    position: absolute;
+    bottom: 20px;
     font-size: 20px;
     font-weight: bold;
     color: orange;
@@ -53,10 +59,12 @@
 }
 
 .card .cardAddToCart {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
     border: none;
     border-radius: 5px;
     padding: 5px;
-    float: right;
     background-color: #36330e;
 }
 

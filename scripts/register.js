@@ -81,8 +81,8 @@ function validatePassword(e) {
     var passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}$/;
     if (!passwordRegex.test(password)) {
         e.target.style.borderColor = "red";
-        e.target.setCustomValidity('Password must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters');
-        notificationPlaceHolderHandler("Password must contain at least one number and one uppercase and lowercase letter, and at least 6 or more characters", "failed")
+        e.target.setCustomValidity('Password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters');
+        notificationPlaceHolderHandler("Password must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters", "failed")
     } else {
         e.target.style.borderColor = "green";
         e.target.setCustomValidity('');
