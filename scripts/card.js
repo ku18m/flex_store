@@ -1,5 +1,5 @@
 /* Card render module */
-import { addProductToCart } from "./cart.js";
+import { addProductToCart } from "./cartControler.js";
 import { showProduct } from "./secLayerDisplay.js";
 
 

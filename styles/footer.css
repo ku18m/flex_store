@@ -1,0 +1,17 @@
+/* Style of footer div */
+
+.footer {
+    background-color: #36330e;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+    margin-top: auto;
+}
+
+.footer p {
+    margin: 20px;
+    font-size: 20px;
+}

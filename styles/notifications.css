@@ -3,9 +3,9 @@
 
 #notificationPlaceholder {
     position: fixed;
-    display: none;
+    display: hidden;
     bottom: 0;
-    z-index: 1000;
+    z-index: 10;
     width: 80%;
     padding: 20px;
     margin: 0 10%;

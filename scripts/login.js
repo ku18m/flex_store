@@ -3,6 +3,8 @@ import * as users from "./users.js";
 import { notificationPlaceHolderHandler } from "./notifications.js";
 import { setCookie } from "./cookies.js";
 import { handleRegisterForm } from "./register.js";
+import { getCurrentUser } from "./user.js";
+import { saveCart } from "./cartControler.js";
 
 
 // Handle login form submission.
@@ -44,6 +46,7 @@ function validateLogin(user) {
 // Process login.
 function processLogin(user) {
     setCookie("loggedInUser", user.username, 3);
+    saveCart(getCurrentUser().cart);
     location.reload();
 }
 

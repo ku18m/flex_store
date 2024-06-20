@@ -1,0 +1,81 @@
+/* Style of the edit profile div */
+
+.profile {
+    width: 700px;
+    margin: auto;
+}
+
+.profile h2 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+#profileUpdateName {
+    color: orange;
+}
+
+.profile h3 {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+#profileUpdateForm {
+    margin-top: 50px;
+}
+
+#profileUpdateForm input {
+    /* width: 100%; */
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+#profileUpdateForm input:focus {
+    outline: none;
+}
+
+#profileUpdateForm button {
+    width: 100px;
+    display: block;
+    padding: 10px;
+    margin: 50px auto;
+    border-radius: 10px;
+    border: none;
+    background-color: #36330e;
+    color: white;
+}
+
+#profileUpdateForm button:hover {
+    background-color: orange;
+    cursor: pointer;
+}
+
+#profileUpdateForm label {
+    text-align: center;
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+#profileUpdateForm select {
+    text-align: center;
+    margin: auto;
+    font-size: 20px;
+    /* width: 100%; */
+    padding: 10px;
+    appearance: none;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid orange;
+    background-color: #36330e;
+}
+
+#profileUpdateForm select option:hover {
+    background-color: orange;
+}

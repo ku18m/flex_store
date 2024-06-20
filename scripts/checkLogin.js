@@ -4,6 +4,7 @@ import { handleLoginForm } from './login.js';
 import * as user from './user.js';
 import { initializeHome } from './home.js';
 import { initializeNavbar } from './navbar.js';
+import { initializeSlider } from './slider.js';
 
 
 // Main display handler.
@@ -15,6 +16,7 @@ function loginDisplayHandler(isUserLoggedIn) {
     }
     initializeNavbar();
     initializeHome();
+    initializeSlider();
     display("mainLayer", "loggedIn");
 }
 

@@ -1,3 +1,5 @@
+/* Intervals handler */
+
 var intervals = {};
 
 

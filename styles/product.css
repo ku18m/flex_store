@@ -1,0 +1,58 @@
+/* Style the product div */
+
+.productPic {
+    border-radius: 10px;
+    width: 400px;
+}
+
+.productTitle {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 50px auto;
+    width: 70%;
+    padding: 0px;
+}
+
+.productParagraph {
+    width: 70%;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+.productPrice {
+    font-size: 40px;
+    font-weight: bold;
+    color: orange;
+    margin: 60px;
+    display: inline-block;
+}
+
+.productAddToCart {
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #36330e;
+    font-size: 20px;
+    color: white;
+}
+
+.productAddToCart:hover {
+    background-color: orange;
+    cursor: pointer;
+}
+
+.productRating {
+    font-size: 20px;
+    color: orange;
+    margin: 20px auto;
+}
+
+.productRating p {
+    display: inline-block;
+    margin: 50px;
+}
+
+.productRating p span {
+    color: #36330e;
+    font-weight: bold;
+}

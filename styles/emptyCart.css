@@ -1,0 +1,8 @@
+/* Emprty cart style */
+
+.emptyCart h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 20px;
+}

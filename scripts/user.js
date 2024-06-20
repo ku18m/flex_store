@@ -1,5 +1,6 @@
 import * as cookies from './cookies.js';
 import { getUser, updateUser, deleteUser } from './users.js';
+import { removeCart } from './cartControler.js';
 
 
 // Get current logged in user.
@@ -23,6 +24,7 @@ function updateCurrentUser(key, value) {
 
 // Log out user.
 function logout() {
+    removeCart();
     cookies.setCookie("loggedInUser", "", -1);
 }
 

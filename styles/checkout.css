@@ -1,0 +1,14 @@
+/* Check out complete style */
+
+.checkout h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.checkout p {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px;
+    color: orange;
+}

@@ -1,0 +1,68 @@
+/* Style for the slider */
+
+
+.sliderBlock {
+    background-image: url("https://www.extensiv.com/hubfs/Skubana/Blog%20Pages/Imported_Blog_Media/online%20shopping%20concept-2-Oct-12-2022-05-46-49-42-PM.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 460px 0;
+    text-align: center;
+    position: relative;
+    color: white;
+}
+
+.sliderBlock .sliderProductBlock {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.sliderBlock button {
+    background-color: #36330eb4;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.sliderBlock button:hover {
+    background-color: rgb(255, 166, 0);
+}
+
+
+button img {
+    width: 30px;
+    height: 30px;
+}
+
+#sliderProductDescription {
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: #36330eb4;
+}
+
+#sliderButton {
+    font-size: 25px;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+#sliderNext {
+    position: absolute;
+    right: 0;
+}
+
+#sliderPrevious {
+    position: absolute;
+    left: 0;
+}
+
+#sliderPrevious img {
+    transform: rotate(180deg);
+}

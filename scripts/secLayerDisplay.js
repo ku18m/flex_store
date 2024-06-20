@@ -2,6 +2,11 @@
 import { getById } from './products.js';
 import { display } from './display.js';
 import { initializeUpdateProfile } from './editProfile.js';
+import { displayProduct } from './product.js';
+import { initializeCart } from './cart.js';
+import { removeCart, getCart } from './cartControler.js';
+import { updateCurrentUser } from './user.js';
+import { initializeSlider } from './slider.js';
 
 
 // Second layer display handler.
@@ -12,12 +17,14 @@ function secLayerDisplayHandler(divToDisplay) {
 
 // Show product event listener.
 function showProduct(productId) {
-    getById(function (product){console.log(product)}, productId);
+    getById(displayProduct, productId);
+    secLayerDisplayHandler("product");
 }
 
 
 // Show home event listener.
 function showHome() {
+    initializeSlider();
     secLayerDisplayHandler("home");
 }
 
@@ -38,7 +45,20 @@ function showProfile() {
 
 // Show cart event listener.
 function showCart() {
+    var cart = getCart();
+    if (Object.keys(cart).length == 0) {
+        secLayerDisplayHandler("emptyCart");
+        return;
+    }
+    initializeCart();
     secLayerDisplayHandler("cart");
 }
 
-export { showProduct, showHome, showCategory, showProfile, showCart };
+// Show checkout event listener.
+function showCheckout() {
+    removeCart();
+    updateCurrentUser("cart", {});
+    secLayerDisplayHandler("checkout");
+}
+
+export { showProduct, showHome, showCategory, showProfile, showCart, showCheckout };

@@ -6,35 +6,61 @@
   <link rel="stylesheet" href="./styles/reset.css">
   <link rel="stylesheet" href="./styles/main.css">
   <link rel="stylesheet" href="./styles/home.css">
+  <link rel="stylesheet" href="./styles/slider.css">
   <link rel="stylesheet" href="./styles/card.css">
   <link rel="stylesheet" href="./styles/login.css">
+  <link rel="stylesheet" href="./styles/register.css">
   <link rel="stylesheet" href="./styles/category.css">
   <link rel="stylesheet" href="./styles/backTop.css">
   <link rel="stylesheet" href="./styles/secLayerTab.css">
   <link rel="stylesheet" href="./styles/notifications.css">
+  <link rel="stylesheet" href="./styles/product.css">
+  <link rel="stylesheet" href="./styles/cart.css">
+  <link rel="stylesheet" href="./styles/emptyCart.css">
+  <link rel="stylesheet" href="./styles/checkout.css">
+  <link rel="stylesheet" href="./styles/profile.css">
+  <link rel="stylesheet" href="./styles/footer.css">
   <link rel="icon" href="https://www.fintechfutures.com/files/2023/09/Flex-logo.jpg">
   <title>Flex</title>
 </head>
 <body>
   <div class="mainLayer register">
+    <button onclick="location.reload()" class="loginBacktoHome">
+      <img src="./assets/navbar/home.png" alt="">
+      Home
+    </button>
+    <h2 class="loginHeader">Flex <span>Store</span></h2>
     <div class="registerFormDiv">
-      <h2>Register</h2>
+      <h3>Register</h3>
       <form action="" id="registerForm">
+        <label for="firstName">First Name</label>
         <input type="text" placeholder="First Name" name="firstName">
+        <label for="lastName">Last Name</label>
         <input type="text" placeholder="Last Name" name="lastName">
+        <label for="username">Username</label>
         <input type="text" placeholder="Username" name="username">
+        <label for="email">Email</label>
         <input type="email" placeholder="Email" name="email">
+        <label for="password">Password</label>
         <input type="password" placeholder="Password" name="password" id="registrationPassword">
+        <label for="passwordConfirm">Confirm Password</label>
         <input type="password" placeholder="Confirm Password" name="passwordConfirm">
         <button type="submit">Register</button>
       </form>
     </div>
   </div>
   <div class="mainLayer login">
+    <button onclick="location.reload()" class="loginBacktoHome">
+      <img src="./assets/navbar/home.png" alt="">
+      Home
+    </button>
+    <h1 class="loginHeader">Flex <span>Store</span></h1>
     <div class="loginFormDiv">
-      <h2>Login</h2>
+      <h2 class="loginTitle">Login</h2>
       <form action="" id="loginForm">
+        <label for="username">Username</label>
         <input type="text" placeholder="Username" name="username">
+        <label for="password">Password</label>
         <input type="password" placeholder="Password" name="password">
         <button type="submit">Login</button>
       </form>
@@ -149,19 +175,11 @@
     </div>
     <div class="secLayer secLayerTab product">
       <div class="productContainer">
-        <div class="productImage">
-          <img src="" alt="" id="productImage">
-        </div>
-        <div class="productDetails">
-          <h2 id="productName"></h2>
-          <p id="productDescription"></p>
-          <p id="productPrice"></p>
-          <button id="addToCartButton">Add to Cart</button>
-        </div>
+        
       </div>
     </div>
     <div class="secLayer profile secLayerTab">
-      <h2>Hi <span id="profileUpdateName"></span>, you can edit your profile from here</h2>
+      <h2>Hi <span id="profileUpdateName"></span>, you can update your profile here</h2>
       <div class="editProfileContainer">
         <h3>Choose what you want to update and enter the new value then you current password</h3>
         <form action="" id="profileUpdateForm">
@@ -213,18 +231,51 @@
           
       </div>
     </div>
-    <div class="secLayer cart">
-      <p>Cart</p>
+    <div class="secLayer secLayerTab emptyCart">
+      <h2>Your cart is empty</h2>
+    </div>
+    <div class="secLayer cart secLayerTab">
+      <div class="cartContainer">
+        <h2>Your Cart</h2>
+        <table class="cartTable">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>Total</th>
+              <th>Remove</th>
+            </tr>
+          </thead>
+          <tbody id="cartPruducts">
+            <!-- Cart Items  -->
+          </tbody>
+        </table>
+        <div class="cartTotal">
+          <p>Total: <span id="cartTotal"></span></p>
+          <button id="checkOutButton">Checkout</button>
+        </div>
+      </div>
+    </div>
+    <div class="secLayer secLayerTab checkout">
+      <h2>Your purchase has been completed successfully</h2>
+      <p>Thank you for shopping with us</p>
     </div>
     <div class="secLayer home">
       <div class="sliderBlock">
-        <div class="contentBlock">
-          <p class="brandName">DIGITAL STUDIO</p>
+        <div class="sliderProductBlock">
+          <button id="sliderProductTitle">Flex Store</button>
           <hr>
-          <p class="slogan">LET US DESIGN YOUR WEBSITE</p>
-          <div class="box">
-            <p>RESPONSIVE TEMPLATE</p>
-          </div>
+          <p id="sliderProductDescription">Where Quality Meets Affordability</p>
+          <button id="sliderPrevious">
+            <img src="./assets/slider/next-previous.png" alt="">
+          </button>
+          <button id="sliderButton">
+            Your Cart Waiting for you to fill it
+          </button>
+          <button id="sliderNext">
+            <img src="./assets/slider/next-previous.png" alt="">
+          </button>
         </div>
       </div>
       <div class="categoryBlock">
@@ -256,6 +307,10 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="cleaner"></div>
+  <div class="footer">
+    <p>© 2024 Flex. All Rights Reserved</p>
   </div>
   <p id="notificationPlaceholder"></p>
   <script type="module" src="./scripts/main.js"></script>
