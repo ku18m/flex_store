@@ -1,17 +1,29 @@
 import * as cookies from './cookies.js';
-import { getUser } from './users.js';
+import { getUser, updateUser, deleteUser } from './users.js';
 
-var user = {};
 
 // Get current logged in user.
 function getCurrentUser() {
-    user = getUser(cookies.getCookie("loggedInUser"));
+    var user = getUser(cookies.getCookie("loggedInUser"));
     return user;
 }
+
+
+// Update user.
+function updateCurrentUser(key, value) {
+    var user = getCurrentUser();
+    if (key == 'username') {
+        deleteUser(user.username);
+    }
+    user[key] = value;
+    updateUser(user);
+    return user;
+}
+
 
 // Log out user.
 function logout() {
     cookies.setCookie("loggedInUser", "", -1);
 }
 
-export { getCurrentUser, logout };
+export { getCurrentUser, updateCurrentUser, logout };

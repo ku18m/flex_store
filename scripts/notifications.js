@@ -4,6 +4,7 @@ function notificationPlaceHolderHandler(message, className) {
     var text = document.getElementById('notificationPlaceholder');
     text.innerHTML = message;
     text.className = className;
+    text.style.display = "block";
     notificationsTimeOut(text);
 }
 
@@ -11,6 +12,7 @@ function notificationPlaceHolderHandler(message, className) {
 function notificationsTimeOut(element) {
     setTimeout(function() {
         element.innerHTML = "";
+        element.style.display = "none";
     }, 5000);
 }
 

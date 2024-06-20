@@ -15,7 +15,8 @@ body {
   z-index: 10;
   margin: 20px 15%;
   align-items: center;
-  /* overflow: hidden; */
+  border: #36330e 0.1em solid;
+  border-radius: 10px;
 }
 
 .navbar .navLogo {
@@ -58,7 +59,9 @@ li button {
 .catogeriesList {
   display: none;
   position: absolute;
-  background-color: #f1f0e4;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: #36330e 0.1em solid;
   width: 125px;
 }
 
@@ -79,7 +82,9 @@ li button {
 .loggedInList {
   display: none;
   position: absolute;
-  background-color: #f1f0e4;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: #36330e 0.1em solid;
   width: 125px;
 }
 
@@ -121,7 +126,10 @@ li button:hover {
 
 .responsiveList {
   display: none;
-  background-color: #f1f0e4;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: #36330e 0.15em solid;
+  padding: 2px;
   width: 100%;
 }
 
@@ -144,7 +152,8 @@ li button:hover {
 }
 
 .responsiveList .ctg-respovsive {
-  border: #36330e 0.1em solid;
+  border: #36330e 0.15em solid;
+  padding: 2px;
 }
 
 .responsiveMenu:hover .responsiveList {
@@ -163,8 +172,10 @@ li button:hover {
 .resLoggedInList {
   display: none;
   position: absolute;
-  background-color: #f1f0e4;
-  border: #36330e 0.1em solid;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: #36330e 0.15em solid;
+  padding: 2px;
   width: 125px;
 }
 

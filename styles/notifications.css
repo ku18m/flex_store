@@ -1,0 +1,31 @@
+
+/* Notification Area classes */
+
+#notificationPlaceholder {
+    position: fixed;
+    display: none;
+    bottom: 0;
+    z-index: 1000;
+    width: 80%;
+    padding: 20px;
+    margin: 0 10%;
+    margin-bottom: 50px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px;
+    display: block;
+}
+
+
+.failed {
+    background-color: rgba(255, 0, 0, 0.678);
+}
+
+.success {
+    background-color: rgba(0, 255, 34, 0.678);
+}
+
+.alert {
+    background-color: orange;
+}

@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="./styles/card.css">
   <link rel="stylesheet" href="./styles/login.css">
   <link rel="stylesheet" href="./styles/category.css">
+  <link rel="stylesheet" href="./styles/backTop.css">
+  <link rel="stylesheet" href="./styles/secLayerTab.css">
+  <link rel="stylesheet" href="./styles/notifications.css">
   <link rel="icon" href="https://www.fintechfutures.com/files/2023/09/Flex-logo.jpg">
   <title>Flex</title>
 </head>
@@ -23,8 +26,7 @@
         <input type="email" placeholder="Email" name="email">
         <input type="password" placeholder="Password" name="password" id="registrationPassword">
         <input type="password" placeholder="Confirm Password" name="passwordConfirm">
-        <p id="notificationPlaceholder"></p>
-        <button>Register</button>
+        <button type="submit">Register</button>
       </form>
     </div>
   </div>
@@ -34,8 +36,7 @@
       <form action="" id="loginForm">
         <input type="text" placeholder="Username" name="username">
         <input type="password" placeholder="Password" name="password">
-        <p id="notificationPlaceholder"></p>
-        <button>Login</button>
+        <button type="submit">Login</button>
       </form>
       <p class="registerMssg">
         Don't have an account?
@@ -44,6 +45,9 @@
     </div>
   </div>
   <div class="mainLayer loggedIn">
+    <button id="backToTopButton">
+      <img src="./assets/mainLayer/back-to-top.png" alt="">
+    </button>
     <div class="navbar">
       <img src="https://www.fintechfutures.com/files/2023/09/Flex-logo.jpg" alt="logo" class="navLogo">
       <div class="responsiveMenu">
@@ -143,38 +147,69 @@
       </ul>
       <div class="cleaner"></div>
     </div>
-    <div class="secLayer profile">
-      <p>Profile</p>
+    <div class="secLayer secLayerTab product">
+      <div class="productContainer">
+        <div class="productImage">
+          <img src="" alt="" id="productImage">
+        </div>
+        <div class="productDetails">
+          <h2 id="productName"></h2>
+          <p id="productDescription"></p>
+          <p id="productPrice"></p>
+          <button id="addToCartButton">Add to Cart</button>
+        </div>
+      </div>
     </div>
-    <div class="secLayer menswear category">
+    <div class="secLayer profile secLayerTab">
+      <h2>Hi <span id="profileUpdateName"></span>, you can edit your profile from here</h2>
+      <div class="editProfileContainer">
+        <h3>Choose what you want to update and enter the new value then you current password</h3>
+        <form action="" id="profileUpdateForm">
+          <label for="userProperties">What you need to change?</label>
+          <select name="userProperties" id="profileUpdateProperty">
+            <option value="firstName">First Name</option>
+            <option value="lastName">Last Name</option>
+            <option value="username">Username</option>
+            <option value="email">Email</option>
+            <option value="password">Password</option>
+          </select>
+          <label for="newValue">New Value</label>
+          <input type="text" placeholder="Enter your new first name" name="newValue" id="profileUpdateValue">
+          <label for="oldPassword">Your Password</label>
+          <input type="password" placeholder="Your Password" name="oldPassword" id="profileUpdatePassword">
+          <button type="submit">Save</button>
+        </form>
+      </div>
+    </div>
+    <div class="secLayer menswear category secLayerTab">
       <h2 class="ctg-title">Men's Wear</h2>
       <h3 class="ctg-slogan">Elevate Your Style, Define Your Confidence</h3>
       <hr>
-      <div class="cardsBlock" id="mensWearCards">
+      <div class="cardsBlock" id="ctg-mensWearCards">
           
       </div>
     </div>
-    <div class="secLayer womenswear category">
+    <div class="secLayer womenswear category secLayerTab">
       <h2 class="ctg-title">Women's Wear</h2>
       <h3 class="ctg-slogan">Empower Your Elegance, Embrace Your Style</h3>
       <hr>
-      <div class="cardsBlock" id="womensWearCards">
+      <div class="cardsBlock" id="ctg-womensWearCards">
           
       </div>
     </div>
-    <div class="secLayer electronics category">
+    <div class="secLayer electronics category secLayerTab">
       <h2 class="ctg-title">Electronics</h2>
       <h3 class="ctg-slogan">Innovate Your World</h3>
       <hr>
-      <div class="cardsBlock" id="electronicsCards">
+      <div class="cardsBlock" id="ctg-electronicsCards">
           
       </div>
     </div>
-    <div class="secLayer jewelery category">
+    <div class="secLayer jewelery category secLayerTab">
       <h2 class="ctg-title">Jewelery</h2>
       <h3 class="ctg-slogan">Elegance in Every Sparkle</h3>
       <hr>
-      <div class="cardsBlock" id="jewelryCards">
+      <div class="cardsBlock" id="ctg-jewelryCards">
           
       </div>
     </div>
@@ -222,6 +257,7 @@
       </div>
     </div>
   </div>
+  <p id="notificationPlaceholder"></p>
   <script type="module" src="./scripts/main.js"></script>
 </body>
 </html>

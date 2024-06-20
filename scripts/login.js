@@ -1,6 +1,5 @@
 import { display } from "./display.js";
 import * as users from "./users.js";
-import { checkLogin } from "./checkLogin.js";
 import { notificationPlaceHolderHandler } from "./notifications.js";
 import { setCookie } from "./cookies.js";
 import { handleRegisterForm } from "./register.js";
@@ -45,7 +44,7 @@ function validateLogin(user) {
 // Process login.
 function processLogin(user) {
     setCookie("loggedInUser", user.username, 3);
-    checkLogin();
+    location.reload();
 }
 
 
