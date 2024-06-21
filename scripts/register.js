@@ -22,7 +22,7 @@ function handleRegisterForm() {
             username: data.get("username"),
             email: data.get("email"),
             password: data.get("password"),
-            cart: []
+            cart: {}
         };
         validateRegister(user);
     });
