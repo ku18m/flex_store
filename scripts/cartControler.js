@@ -38,6 +38,7 @@ function addProductToCart(productId) {
     }
     getById(addToTotalPrice, productId);
     saveCart(cart);
+    notificationPlaceHolderHandler("Product added to cart.", "success");
 }
 
 
@@ -57,6 +58,7 @@ function removeProductFromCart(productId) {
     }
     getById(removeFromTotalPrice, productId);
     saveCart(cart);
+    notificationPlaceHolderHandler("Product removed from cart.", "success");
 }
 
 
