@@ -1,8 +1,8 @@
 import { clearIntervals } from "./intervals.js";
 
-// Handle displaying of the tasks, also clear the tasks and it's intervals.
+// Main display handler.
 export function display(parent, childToDisplay, e) {
-    clear(parent); // Clear all the main divs.
+    clear(parent); // Hide all the parent components.
     childToDisplay = document.querySelector(`.${childToDisplay}`);
     childToDisplay.style.display = "block";
 }
@@ -15,4 +15,3 @@ function clear(parent) {
     }
     clearIntervals();
 }
-

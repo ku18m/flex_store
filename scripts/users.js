@@ -13,6 +13,9 @@ function getUsers() {
 // Get user.
 function getUser(username) {
     var users = getUsers();
+    if (!users) {
+        return;
+    }
     return users[username];
 }
 
